@@ -1,0 +1,26 @@
+﻿<div class='container'>
+    
+    <h2 class="text-center">Recent Post</h2>
+        <div class=''>
+           
+            <div class="alert alert-info" role="alert" *ngIf="indLoading"><img src="../../images/loading.gif" width="32" height="32" /> Loading...</div>
+            <div *ngIf='posts && posts.length==0' class="alert alert-info" role="alert">No record found!</div>
+            <div class='' *ngIf='posts && posts.length'>
+             
+              
+                    <div *ngFor="let post of posts" style="border:1px solid">
+                        
+                        <div class="" style="padding:5px;">
+                            <h2>Title: {{post.Title}}</h2>
+                            <p>Post: {{post.Post}}</p>
+                            <h4>Writer Name: {{post.Writter}}</h4>
+                        </div>
+
+                     </div>
+            </div>
+            <div>
+            </div>
+        </div>
+        
+    
+</div>
